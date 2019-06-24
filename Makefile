@@ -22,7 +22,7 @@ install develop: $(VENV)
 #
 # Django
 #
-DJANGO_SETTINGS_MODULE = ilfp.settings
+DJANGO_SETTINGS_MODULE = django_sample.settings
 PYTHONPATH := $(PYTHONPATH):$(PWD)/python
 export DJANGO_SETTINGS_MODULE PYTHONPATH
 
