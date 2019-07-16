@@ -34,3 +34,5 @@ developuser: $(VENV)
 py-clean:
 	find $(PWD) -iname '*.py[cod]' -delete
 	find $(PWD) -iname '__pycache__' | xargs rm -rf
+full-clean: py-clean
+	rm -rf "$(VENV)"
