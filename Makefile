@@ -26,11 +26,8 @@ DJANGO_SETTINGS_MODULE = django_sample.settings
 PYTHONPATH := $(PYTHONPATH):$(PWD)/python
 export DJANGO_SETTINGS_MODULE PYTHONPATH
 
-runserver migrate clearsessions: $(VENV)
+runserver migrate clearsessions makemigrations: $(VENV)
 	@$(DJANGO) "$@"
-makemigrations: $(VENV)
-	find "$(PWD)/python" -iname 'models.py' | xargs -I'{}' dirname '{}' \
-		| xargs -I'{}' basename '{}' | sort -u | xargs $(DJANGO) "$@"
 developuser: $(VENV)
 	@echo "Username: testing"
 	$(DJANGO) createsuperuser --username=testing --email=testing@example.org
