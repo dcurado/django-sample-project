@@ -10,6 +10,6 @@ setup(
     packages=find_packages("python"),
     package_dir={"": "python"},
     install_requires=[
-        "Django==2.2.3"
+        "Django==2.2.13"
     ],
 )
